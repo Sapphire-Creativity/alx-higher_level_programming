@@ -1,14 +1,7 @@
 #!/usr/bin/python3
+"""Defines an object attribute lookup function."""
+
 
 def lookup(obj):
-    attributes_and_methods = []
-    
-    for attribute_name in dir(obj):
-        
-        if callable(getattr(obj, attribute_name)):
-            attributes_and_methods.append(f"{attribute_name}()")
-        
-        else:
-            attributes_and_methods.append(attribute_name)
-            
-    return attributes_and_methods
+    """Return a list of an object's available attributes."""
+    return (dir(obj))
